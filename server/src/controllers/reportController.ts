@@ -1,11 +1,11 @@
 import { Request, Response } from 'express';
 import pool from '../database';
-import query from '../queries/query';
+import queryReport from '../queries/queryReport';
 class ReportController {
 
     public async reportOne(req: Request, res: Response) {
         const { idrfid } = req.params;
-        const report = await pool.query(query.queryOne, idrfid);
+        const report = await pool.query(queryReport.queryOne, idrfid);
         res.json(report);
     }
 
