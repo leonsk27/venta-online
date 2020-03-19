@@ -7,3 +7,4 @@ pool.getConnection()
     console.log('database connected');
 });
 export default pool;
+// comentario de prueba

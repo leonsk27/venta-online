@@ -12,3 +12,4 @@ pool.getConnection()
     console.log('database connected');
 });
 exports.default = pool;
+// comentario de prueba
