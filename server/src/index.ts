@@ -2,6 +2,8 @@ import express, { Application } from 'express';
 import morgan from 'morgan';
 import cors from 'cors';
 
+import reportRoutes from './routes/reportRoutes';
+
 
 class Server {
 
@@ -19,7 +21,7 @@ class Server {
         this.app.use(express.urlencoded({extended: false}));
     }
     route() {
-       
+       this.app.use('/api/report', reportRoutes);
     }
     start() {
         this.app.listen(this.app.get('port'), () => {
