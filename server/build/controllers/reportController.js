@@ -13,13 +13,51 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const database_1 = __importDefault(require("../database"));
-const query_1 = __importDefault(require("../queries/query"));
+const queryReport_1 = __importDefault(require("../queries/queryReport"));
 class ReportController {
     reportOne(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             const { idrfid } = req.params;
-            const report = yield database_1.default.query(query_1.default.queryOne, idrfid);
+            const report = yield database_1.default.query(queryReport_1.default.queryOne, idrfid);
             res.json(report);
+        });
+    }
+    reportTwo(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+        });
+    }
+    reportThree(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const { date1 } = req.params;
+            const { date2 } = req.params;
+            const report = yield database_1.default.query(queryReport_1.default.queryThree, [date1, date2]);
+            res.json(report);
+        });
+    }
+    reportFor(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+        });
+    }
+    reportFive(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const { idrfid } = req.params;
+            const report = yield database_1.default.query(queryReport_1.default.queryFive, idrfid);
+            res.json(report);
+        });
+    }
+    reportSix(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+        });
+    }
+    reportSeven(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const { idrfid } = req.params;
+            const report = yield database_1.default.query(queryReport_1.default.querySeven, idrfid);
+            res.json(report);
+        });
+    }
+    reportEigh(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
         });
     }
 }
