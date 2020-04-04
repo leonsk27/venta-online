@@ -14,6 +14,7 @@ import { ClientGuard } from './guards/client.guard';
 import { TokenInterceptorService } from './services/token-interceptor.service';
 import { AdmGuard } from './guards/adm.guard';
 import { ProductListComponent } from './components/product/product-list/product-list.component';
+import { ReportService } from './services/report.service';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { ProductListComponent } from './components/product/product-list/product-
   ],
   providers: [
     AuthService,
+    ReportService,
     ClientGuard,
     AdmGuard,
     {

@@ -1,6 +1,34 @@
 <div>
 <label for="menuReport">Elija un reporte</label>
-<select class="custom-select" (change)="change($event.target.value)" name="menuReport">
+<select class="custom-select" (change)="changeReportOption($event.target.value)" name="menuReport">
     <option *ngFor="let op of options" [value]="op.value">{{op.opt}}</option>
     </select>
+</div>
+
+<!-- 1.	Productos más vendidos por mes (mínimamente 8 y de cada producto debe tener como mínimo 12 compradores ) -->
+<div name="report1">
+    <table class="table">
+        <thead class="thead-blue">
+            <tr>
+                <th>Titulo</th>
+                <th>Cantidad</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let product of resultReports">
+                <td>{{product.titulo}}</td>
+                <td>{{product.cantidad}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<div name="report2">
+    
+</div>
+
+
+<div name="report3">
+
 </div>

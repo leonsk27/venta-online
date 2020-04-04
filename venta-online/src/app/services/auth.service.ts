@@ -30,7 +30,9 @@ export class AuthService {
   getIdPrivilege() {
     if (this.getToken() !== null) {
       const localVar = this.getToken();
+      console.log('variable local', localVar);
       const decode: any = jwt_decode(localVar);
+      console.log('decoded', localVar);
       return Number(decode.idRol);
     } else {
       return -1;

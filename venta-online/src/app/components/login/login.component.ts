@@ -26,15 +26,11 @@ export class LoginComponent implements OnInit {
         }
       );
     }
-    testAtuh() {
-      const user = this.formGroup.value;
-      this.authService.login(user);
-    }
     login() {
       const res = this.authService.login(this.formGroup.value).subscribe(
         res => {
           localStorage.setItem('token', res.token);
-          this.router.navigate(['/report']);
+          this.router.navigate(['/product']);
         },
         err => {
           console.log('err desde servicio: ', err);
