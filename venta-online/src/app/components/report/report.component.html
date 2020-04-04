@@ -1,0 +1,7 @@
+<div>
+<label for="menuReport">Elija un reporte</label>
+<select class="custom-select" (change)="change($event.target.value)" name="menuReport">
+    <option *ngFor="let op of options" [value]="op.value">{{op.opt}}</option>
+    </select>
+</div>
+<!-- Productos más vendidos por mes -->

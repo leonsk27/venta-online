@@ -1,9 +1,31 @@
-insert into rol(tipoRol)
+insert into rol(nombre)
 values('administradores'),
 
       ('colaboradores'),
 
       ('verificacion');
+insert into usuario values 
+(null, "Carlos", "Alberto", "Ojeda", "Vargas",
+"7898145", 1, "albertovargas7898145", aes_encrypt("7898145","key123"), 1, 1);
+
+insert into cliente values
+(null, "Edson", null, "Lido", "Espinoza", "12345678", 1, "1997-01-10", 1, "espinoza12345678", aes_encrypt("12345678","key123"), 1);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 insert into usuario(idRol,ciUsuario,primerNombre,segundoNombre,apellidoPaterno,apellidoMaterno,genero,usuario,contrasenia,activo)
 values(1,'6354ds6','Juan','Carlos','Aruni','Vargas',1,'carlos','123',1),
@@ -34,16 +56,16 @@ values(1,'6354ds6','Juan','Carlos','Aruni','Vargas',1,'carlos','123',1),
       (3,'46sd58d','Danny',null,'freeman','feel',1,'danny','123',1),
       (3,'554fs6a','Marcus',null,'Wallker','circus',1,'marcus','123',1);
 
-insert into departamento(nombreDepartamento,precioDepartamento,activo)
-values('Beni',100,1),
-      ('Santa Cruz',70,1),
-      ('La Paz',50,1),
-      ('Oruro',30,1),
-      ('Tarija',80,1),
-      ('Sucre',50,1),
-      ('Pando',120,1),
-      ('Potosi',80,1),
-      ('Cochabamba',0,1);
+insert into departamento(departamento,transporte)
+values('Beni',100),
+      ('Santa Cruz',70),
+      ('La Paz',50),
+      ('Oruro',30),
+      ('Tarija',80),
+      ('Sucre',50),
+      ('Pando',120),
+      ('Potosi',80),
+      ('Cochabamba',0);
 
 insert into pedido(idDepartamento,pedidoRapido,totalProductosPedidos,fechaHoraPedido)
 values(1,1,9,'2020-01-01 23:59:59'),
@@ -279,9 +301,9 @@ INSERT into categoria values(1,"informatica","buena",1),
                                 (35,7,"tenis","buena",1);
 
 
-INSERT into detalleproducto   values(1,"lapto","pantalla de 15 pulgadas corei7","hp",23,1),
+INSERT into detalleproducto   values(1,"pantalla","15 pulgadas corei7","hp",23,1),
                                     (2,"disco de memoria","capacidad de 1024 mb ","thoshiba",23,1),
-                                    (3,"monitor","pantalla de 22 pulgadas","lg",23,1),
+                                    (3,"monitor","22 pulgadas","lg",23,1),
                                     (4,"impresora","con escaner fotocopiadora","epson",23,1),
                                     (5,"targeta grafica","titaniun","gtx 980",23,1),
                                     (6,"placa base","dual core","asrock",23,1),

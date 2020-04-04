@@ -3,6 +3,7 @@ import morgan from 'morgan';
 import cors from 'cors';
 
 import reportRoutes from './routes/reportRoutes';
+import userRoutes from './routes/userRoutes';
 
 
 class Server {
@@ -22,6 +23,7 @@ class Server {
     }
     route() {
        this.app.use('/api/report', reportRoutes);
+       this.app.use('/api/user', userRoutes);
     }
     start() {
         this.app.listen(this.app.get('port'), () => {

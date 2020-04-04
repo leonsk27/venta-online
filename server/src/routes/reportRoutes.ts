@@ -6,10 +6,10 @@ class ReportRoutes {
         this.config();
     }
     config() {
-        this.router.use('/1', reportController.reportOne);
-        this.router.use('/3', reportController.reportThree);
-        this.router.use('/5', reportController.reportFive);
-        this.router.use('/7', reportController.reportSeven);
+        this.router.get('/1', reportController.reportOne);
+        this.router.get('/3', reportController.reportThree);
+        this.router.get('/5', reportController.reportFive);
+        this.router.get('/7', reportController.reportSeven);
     }
 }
 const reportRoutes = new ReportRoutes();
