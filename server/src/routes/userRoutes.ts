@@ -6,7 +6,7 @@ class UserRoutes {
         this.config();
     }
     config() {
-        this.router.post('/sigin', authController.sigin);
+        this.router.post('/signin', authController.signin);
     }
 }
 const userRoutes = new UserRoutes();

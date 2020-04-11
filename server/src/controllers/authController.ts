@@ -6,7 +6,7 @@ import auth from '../auth';
 
 class AuthController {
 
-    public async sigin(req: Request, res: Response) {
+    public async signin(req: Request, res: Response) {
         const usuario = req.body.usuario;
         const password = req.body.password;
         let login: any[] = await pool.query("select idusuario, idrol from usuario where usuario = ? and aes_decrypt(contrasenha, ?) = ? and activo = 1", [usuario, keyPass.pass, password]);

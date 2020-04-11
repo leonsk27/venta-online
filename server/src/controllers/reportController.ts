@@ -4,8 +4,8 @@ import queryReport from '../queries/queryReport';
 class ReportController {
 
     public async reportOne(req: Request, res: Response) {
-        const { idrfid } = req.params;
-        const report = await pool.query(queryReport.queryOne, idrfid);
+        const {  } = req.params;
+        const report = await pool.query(queryReport.queryOne);
         res.json(report);
     }
     public async reportTwo(req: Request, res: Response) {
@@ -17,7 +17,7 @@ class ReportController {
         const report = await pool.query(queryReport.queryThree, [date1, date2]);
         res.json(report);
     }
-    public async reportFor(req: Request, res: Response) {
+    public async reportFour(req: Request, res: Response) {
     }
     public async reportFive(req: Request, res: Response) {
         const { idrfid } = req.params;
