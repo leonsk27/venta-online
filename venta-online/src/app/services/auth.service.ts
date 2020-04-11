@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import * as jwt_decode from "jwt-decode";
-
 @Injectable({
   providedIn: 'root'
 })
@@ -21,7 +20,6 @@ export class AuthService {
     
   }
   VerifyToken() {
-    console.log('tezt token: ', !!localStorage.getItem('token'));
     return !!localStorage.getItem('token');
   }
   getToken() {
@@ -32,8 +30,8 @@ export class AuthService {
       const localVar = this.getToken();
       console.log('variable local', localVar);
       const decode: any = jwt_decode(localVar);
-      console.log('decoded', localVar);
-      return Number(decode.idRol);
+      console.log('decoded', decode);
+      return Number(decode.idUsuario);
     } else {
       return -1;
     }

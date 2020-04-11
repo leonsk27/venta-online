@@ -110,25 +110,6 @@ insert into producto values
 insert into producto values
 (null, 'Cargador portatil samsung 2w', 10, 50, 'Samsung', 'https://images-na.ssl-images-amazon.com/images/I/817hInLq9FL._AC_SL1500_.jpg',4);
 
-insert into color values
-(null, '');
-insert into color values
-(null, '');
-insert into color values
-(null, '');
-insert into color values
-(null, '');
-insert into color values
-(null, '');
-insert into color values
-(null, '');
-insert into color values
-(null, '');
-insert into color values
-(null, '');
-insert into color values
-(null, '');
-
 insert into productoColor values 
 (null, 'https://images-na.ssl-images-amazon.com/images/I/817hInLq9FL._AC_SL1500_.jpg', 1, 1);
 insert into productoColor values 

@@ -4,31 +4,96 @@
     <option *ngFor="let op of options" [value]="op.value">{{op.opt}}</option>
     </select>
 </div>
-
 <!-- 1.	Productos más vendidos por mes (mínimamente 8 y de cada producto debe tener como mínimo 12 compradores ) -->
-<div name="report1">
-    <table class="table">
-        <thead class="thead-blue">
-            <tr>
-                <th>Titulo</th>
-                <th>Cantidad</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let product of resultReports">
-                <td>{{product.titulo}}</td>
-                <td>{{product.cantidad}}</td>
-            </tr>
-        </tbody>
-    </table>
+<div *ngIf="optionReport == 1" class="row" name="report1">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <ul>
+                    <li><a class="nav-link" (click)="changeMonth(1)">Enero</a></li>
+                    <li><a class="nav-link" (click)="changeMonth(2)">Febrero</a></li>
+                    <li><a class="nav-link" (click)="changeMonth(3)">Marzo</a></li>
+                    <li><a class="nav-link" (click)="changeMonth(4)">Abril</a></li>
+                    <li><a class="nav-link" (click)="changeMonth(5)">Mayo</a></li>
+                    <li><a class="nav-link" (click)="changeMonth(6)">Junio</a></li>
+                    <li><a class="nav-link" (click)="changeMonth(7)">Julio</a></li>
+                    <li><a class="nav-link" (click)="changeMonth(8)">Agosto</a></li>
+                    <li><a class="nav-link" (click)="changeMonth(9)">Septiembre</a></li>
+                    <li><a class="nav-link" (click)="changeMonth(10)">Octubre</a></li>
+                    <li><a class="nav-link" (click)="changeMonth(11)">Noviembre</a></li>
+                    <li><a class="nav-link" (click)="changeMonth(12)">Diciembre</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-body">
+                    <table class="table">
+                        <thead class="thead-blue">
+                            <tr>
+                                <th>Titulo</th>
+                                <th>Cantidad</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let product of resultReports">
+                                <td>{{product.titulo}}</td>
+                                <td>{{product.cantidad}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+            </div>
+        </div>
+    </div>
 </div>
 
 
-<div name="report2">
-    
+<div *ngIf="optionReport == 2" class="row" name="report2">
+
 </div>
 
 
-<div name="report3">
+<div *ngIf="optionReport == 3" class="row" name="report3">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-body">
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-body">
+                <table class="table">
+                    <thead class="thead-blue">
+                        <tr>
+                            <th>Categoria</th>
+                            <th>Compras</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let product of resultReports">
+                            <td>{{product.nombre}}</td>
+                            <td>{{product.compra}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
 
+
+<div *ngIf="optionReport == 5" class="row" name="report5">
+<div>
+    <div>
+      <div style="display: block">
+        <canvas baseChart
+              [data]="doughnutChartData"
+              [labels]="doughnutChartLabels"
+              [chartType]="doughnutChartType">
+            </canvas>
+          </div>
+        </div>
+      </div>
 </div>

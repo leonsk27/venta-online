@@ -11,12 +11,11 @@ export class AdmGuard implements CanActivate {
     private router: Router) {}
 
   canActivate(): boolean {
-    return true;
-    // console.log('privilege: ', this.authService.getIdPrivilege());
-    // if (this.authService.getIdPrivilege() === 1) {
-    //   return true;
-    // }
-    // this.router.navigate(['/product']);
-    // return false;
+    console.log('privilege: ', this.authService.getIdPrivilege());
+    if (this.authService.getIdPrivilege() === 1) {
+      return true;
+    }
+    this.router.navigate(['/product']);
+    return false;
   }
 }

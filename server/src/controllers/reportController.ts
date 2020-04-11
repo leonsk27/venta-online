@@ -20,16 +20,14 @@ class ReportController {
     public async reportFor(req: Request, res: Response) {
     }
     public async reportFive(req: Request, res: Response) {
-        const { idrfid } = req.params;
-        const report = await pool.query(queryReport.queryFive, idrfid);
+        const report = await pool.query(queryReport.queryFive);
         res.json(report);
     }
     public async reportSix(req: Request, res: Response) {
 
     }
     public async reportSeven(req: Request, res: Response) {
-        const { idrfid } = req.params;
-        const report = await pool.query(queryReport.querySeven, idrfid);
+        const report = await pool.query(queryReport.querySeven);
         res.json(report);
     }
     public async reportEigh(req: Request, res: Response) {

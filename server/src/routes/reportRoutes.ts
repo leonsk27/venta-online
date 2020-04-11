@@ -7,7 +7,7 @@ class ReportRoutes {
     }
     config() {
         this.router.get('/1', reportController.reportOne);
-        this.router.get('/3', reportController.reportThree);
+        this.router.get('/3/:date1/:date2', reportController.reportThree);
         this.router.get('/5', reportController.reportFive);
         this.router.get('/7', reportController.reportSeven);
     }
