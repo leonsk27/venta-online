@@ -4,8 +4,8 @@ import queryReport from '../queries/queryReport';
 class ReportController {
 
     public async reportOne(req: Request, res: Response) {
-        const {  } = req.params;
-        const report = await pool.query(queryReport.queryOne);
+        const { month } = req.params;
+        const report = await pool.query(queryReport.queryOne, [month]);
         res.json(report);
     }
     public async reportTwo(req: Request, res: Response) {

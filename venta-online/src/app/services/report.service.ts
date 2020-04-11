@@ -10,8 +10,8 @@ export class ReportService {
   constructor(
     private http: HttpClient
   ) { }
-  reportOne() {
-    return this.http.get<any[]>(`${this.API_URI}/report/1`);
+  reportOne(month: number) {
+    return this.http.get<any[]>(`${this.API_URI}/report/1/${month}`);
   }
   reportThree( date1: Date, date2: Date) {
     return this.http.get<any[]>(`${this.API_URI}/report/3/${date1}/${date2}`);
