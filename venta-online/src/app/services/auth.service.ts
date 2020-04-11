@@ -12,7 +12,7 @@ export class AuthService {
   constructor(private http: HttpClient, private router: Router) { }
 
   login(user: any) {
-    return this.http.post<any>(`${this.API_URI}/user/sigin`, user);
+    return this.http.post<any>(`${this.API_URI}/user/signin`, user);
   }
   logout() {
     localStorage.removeItem('token');
