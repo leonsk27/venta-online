@@ -16,7 +16,7 @@ const database_1 = __importDefault(require("../database"));
 const keyPass_1 = __importDefault(require("./keyPass"));
 const auth_1 = __importDefault(require("../auth"));
 class AuthController {
-    sigin(req, res) {
+    signin(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             const usuario = req.body.usuario;
             const password = req.body.password;

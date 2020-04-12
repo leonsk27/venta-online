@@ -17,8 +17,8 @@ const queryReport_1 = __importDefault(require("../queries/queryReport"));
 class ReportController {
     reportOne(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
-            const { idrfid } = req.params;
-            const report = yield database_1.default.query(queryReport_1.default.queryOne, idrfid);
+            const { month } = req.params;
+            const report = yield database_1.default.query(queryReport_1.default.queryOne, [month]);
             res.json(report);
         });
     }
@@ -34,14 +34,13 @@ class ReportController {
             res.json(report);
         });
     }
-    reportFor(req, res) {
+    reportFour(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
         });
     }
     reportFive(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
-            const { idrfid } = req.params;
-            const report = yield database_1.default.query(queryReport_1.default.queryFive, idrfid);
+            const report = yield database_1.default.query(queryReport_1.default.queryFive);
             res.json(report);
         });
     }
@@ -51,8 +50,7 @@ class ReportController {
     }
     reportSeven(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
-            const { idrfid } = req.params;
-            const report = yield database_1.default.query(queryReport_1.default.querySeven, idrfid);
+            const report = yield database_1.default.query(queryReport_1.default.querySeven);
             res.json(report);
         });
     }

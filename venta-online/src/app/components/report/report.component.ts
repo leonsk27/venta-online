@@ -38,11 +38,14 @@ export class ReportComponent implements OnInit {
   ngOnInit() {
     this.reportOne();
   }
+  select(num: number) {
+    console.log('new select: ', num);
+  }
   changeReportOption(option: number) {
     this.optionReport = option;
   }
   reportOne() {
-    this.reportService.reportOne().subscribe(
+    this.reportService.reportOne(1).subscribe(
        res => {
          console.log('res actual: ', res);
          this.resultReports = res;

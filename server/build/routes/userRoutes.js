@@ -11,7 +11,7 @@ class UserRoutes {
         this.config();
     }
     config() {
-        this.router.post('/sigin', authController_1.default.sigin);
+        this.router.post('/signin', authController_1.default.signin);
     }
 }
 const userRoutes = new UserRoutes();
