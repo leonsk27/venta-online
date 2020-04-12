@@ -36,16 +36,15 @@ export class ReportComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.reportOne();
-  }
-  select(num: number) {
-    console.log('new select: ', num);
+    this.optionReport = 1;
+    this.reportOne(1);
   }
   changeReportOption(option: number) {
     this.optionReport = option;
   }
-  reportOne() {
-    this.reportService.reportOne(1).subscribe(
+  // methods for report 1
+  reportOne(month: number) {
+    this.reportService.reportOne(month).subscribe(
        res => {
          console.log('res actual: ', res);
          this.resultReports = res;
@@ -55,6 +54,9 @@ export class ReportComponent implements OnInit {
        }
     )
   }
+  // methods for report 2
+
+  // methods for report 3
   reportThree() {
     this.reportService.reportThree(this.date1, this.date2).subscribe(
        res => {
@@ -65,9 +67,6 @@ export class ReportComponent implements OnInit {
          console.log('error report 1: ', err);
        }
     )
-  }
-  changeMonth(month: number) {
-    console.log('cambiando numero: ', month);
   }
 
 

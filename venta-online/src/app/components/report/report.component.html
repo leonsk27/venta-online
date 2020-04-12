@@ -10,18 +10,18 @@
             <div class="card">
                 <div class="card-body">
                     <ul>
-                    <li><a class="nav-link" (click)="changeMonth(1)">Enero</a></li>
-                    <li><a class="nav-link" (click)="changeMonth(2)">Febrero</a></li>
-                    <li><a class="nav-link" (click)="changeMonth(3)">Marzo</a></li>
-                    <li><a class="nav-link" (click)="changeMonth(4)">Abril</a></li>
-                    <li><a class="nav-link" (click)="changeMonth(5)">Mayo</a></li>
-                    <li><a class="nav-link" (click)="changeMonth(6)">Junio</a></li>
-                    <li><a class="nav-link" (click)="changeMonth(7)">Julio</a></li>
-                    <li><a class="nav-link" (click)="changeMonth(8)">Agosto</a></li>
-                    <li><a class="nav-link" (click)="changeMonth(9)">Septiembre</a></li>
-                    <li><a class="nav-link" (click)="changeMonth(10)">Octubre</a></li>
-                    <li><a class="nav-link" (click)="changeMonth(11)">Noviembre</a></li>
-                    <li><a class="nav-link" (click)="changeMonth(12)">Diciembre</a></li>
+                    <li><a class="nav-link" (click)="reportOne(1)">Enero</a></li>
+                    <li><a class="nav-link" (click)="reportOne(2)">Febrero</a></li>
+                    <li><a class="nav-link" (click)="reportOne(3)">Marzo</a></li>
+                    <li><a class="nav-link" (click)="reportOne(4)">Abril</a></li>
+                    <li><a class="nav-link" (click)="reportOne(5)">Mayo</a></li>
+                    <li><a class="nav-link" (click)="reportOne(6)">Junio</a></li>
+                    <li><a class="nav-link" (click)="reportOne(7)">Julio</a></li>
+                    <li><a class="nav-link" (click)="reportOne(8)">Agosto</a></li>
+                    <li><a class="nav-link" (click)="reportOne(9)">Septiembre</a></li>
+                    <li><a class="nav-link" (click)="reportOne(10)">Octubre</a></li>
+                    <li><a class="nav-link" (click)="reportOne(11)">Noviembre</a></li>
+                    <li><a class="nav-link" (click)="reportOne(12)">Diciembre</a></li>
                     </ul>
                 </div>
             </div>
@@ -55,6 +55,16 @@
 
 
 <div *ngIf="optionReport == 3" class="row" name="report3">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-body">
+                <label for="dateBegin">Fecha inicial</label>
+        <input class="form-control" type="date" name="date1" [(ngModel)]="date1">
+        <label for="dateEnd">Fecha final</label>
+        <input class="form-control" type="date" name="date2" [(ngModel)]="date2">
+            </div>
+        </div>
+    </div>
     <div class="col-md-6">
         <div class="card">
             <div class="card-body">
