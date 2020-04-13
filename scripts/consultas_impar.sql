@@ -19,8 +19,9 @@ count(co.idcompra) as 'compras'
 from
 cliente c join
 compra co on co.idcliente = c.idcliente
-where year(co.fecha) = ?
+where year(co.fecha) = "?"
 group by c.idcliente order by count(co.idcompra) desc;
+
 -- 3.	Cantidad de ventas por departamento (de la categoría de productos) de mayor a menor. Dada dos fechas seleccionadas mostrar el reporte.
 
 select 
@@ -35,6 +36,13 @@ where co.fecha between ? and ? group by c.idcategoria order by c.idcategoria des
 
 -- 4.	Seleccionada un departamento (de la categoría de productos) mostrar reporte estadístico de los productos vendidos de mayor a menor.
 
+select c.nombre, dc.cantidad
+from categoria c 
+join subcategoria sc on c.idcategoria = sc.idcategoria
+join producto p on sc.idsubcategoria = p.idsubcategoria
+join detalleCompra dc on p.idproducto = dc.idproducto
+where c.idcategoria = "?"
+order by dc.cantidad desc;
 
 -- 5.	Mostrar un reporte estadístico por ciudades el promedio de ventas que se realizó.
 
@@ -48,11 +56,28 @@ group by d.departamento order by d.iddepartamento;
 
 -- 6.	Seleccionado una ciudad mostrar los 5 productos más vendidos.
 
+select d.departamento, dc.cantidad
+from departamento d 
+join cliente cl on d.iddepartamento = cl.iddepartamento
+join compra c on cl.idcliente = c.idcliente
+join detalleCompra dc on c.idcompra = dc.idcompra
+join producto p on dc.idproducto = p.idproducto
+where d.iddepartamento = "?"
+order by dc.cantidad desc
+limit 5;
+
 -- 7.	Listar todos aquellos colaboradores y la cantidad de órdenes que despacharon cada uno de ellos.
 
 -- 8.	Listar todos aquellos verificadores y la cantidad de órdenes que cambiaron a Entregado.
 
-
+select concat_ws(" ", u.primernombre, u.segundoNombre, u.apellidoPaterno, u.apellidoMaterno) as 'usuario', count(c.estado)
+from usuario u 
+join rol r on r.idrol = u.idrol
+join cambioestado ce on u.idusuario = ce.idusuario
+join compra c on ce.idcompra = c.idcompra
+where r.nombre = 'verificador'
+and c.estado = 'entregado'
+order by 'usuario';
 
 
 
