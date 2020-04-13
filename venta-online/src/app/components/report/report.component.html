@@ -55,23 +55,17 @@
 
 
 <div *ngIf="optionReport == 3" class="row" name="report3">
-    <div class="col-md-6">
+    <div class="col-md-4">
         <div class="card">
             <div class="card-body">
                 <label for="dateBegin">Fecha inicial</label>
         <input class="form-control" type="date" name="date1" [(ngModel)]="date1">
         <label for="dateEnd">Fecha final</label>
-        <input class="form-control" type="date" name="date2" [(ngModel)]="date2">
+        <input class="form-control" type="date" name="date2" [(ngModel)]="date2" (change)="reportThree()">
             </div>
         </div>
     </div>
-    <div class="col-md-6">
-        <div class="card">
-            <div class="card-body">
-            </div>
-        </div>
-    </div>
-    <div class="col-md-6">
+    <div class="col-md-8">
         <div class="card">
             <div class="card-body">
                 <table class="table">

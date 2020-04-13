@@ -58,15 +58,16 @@ export class ReportComponent implements OnInit {
 
   // methods for report 3
   reportThree() {
-    this.reportService.reportThree(this.date1, this.date2).subscribe(
-       res => {
-         console.log('res actual: ', res);
-         this.resultReports = res;
-       },
-       err => {
-         console.log('error report 1: ', err);
-       }
-    )
+    console.log('dates: ', this.date1, this.date2);
+    // this.reportService.reportThree(this.date1, this.date2).subscribe(
+    //    res => {
+    //      console.log('res actual: ', res);
+    //      this.resultReports = res;
+    //    },
+    //    err => {
+    //      console.log('error report 1: ', err);
+    //    }
+    // )
   }
 
 
