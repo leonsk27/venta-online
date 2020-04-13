@@ -44,6 +44,19 @@ join detalleCompra dc on p.idproducto = dc.idproducto
 where c.idcategoria = "?"
 order by dc.cantidad desc;
 
+--4. Seleccionado un departamento (de la categoría de productos) mostrar reporte estadístico de los productos vendidos de mayor a menor.
+--(cantidad vendida del producto dentro de la categoria*100)/total de ventas de la categoria
+
+select c.nombre, dc.cantidad, 
+round((sum(dc.idproducto) * 100 / count(p.idsubcategoria)), 2
+) as 'Porcentaje'
+from categoria c 
+join subcategoria sc on c.idcategoria = sc.idcategoria
+join producto p on sc.idsubcategoria = p.idsubcategoria
+join detalleCompra dc on p.idproducto = dc.idproducto
+where c.idcategoria = "?"
+order by dc.cantidad desc;
+
 -- 5.	Mostrar un reporte estadístico por ciudades el promedio de ventas que se realizó.
 
 select 
