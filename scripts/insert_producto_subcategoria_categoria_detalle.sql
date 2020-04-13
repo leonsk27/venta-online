@@ -267,3 +267,114 @@ insert into compra values
 (null, '2020-01-11', 1, 'simon i patinho #220', 0, 1);
 insert into compra values 
 (null, '2020-01-10', 1, 'simon i patinho #220', 0, 1);
+
+-- insert valoracion
+
+INSERT INTO valoracion VALUES (null,5,'Muy buen producto sin defectos','20-01-2020',1,14);
+INSERT INTO valoracion VALUES (null,5,'Muy buen producto sin defectos','22-01-2020',1,19);
+INSERT INTO valoracion VALUES (null,5,'Muy buen producto sin defectos','25-01-2020',1,11);
+INSERT INTO valoracion VALUES (null,4,'Buen producto','29-01-2020',1,13);
+INSERT INTO valoracion VALUES (null,5,'Muy buen producto sin defectos','02-02-2020',1,6);
+INSERT INTO valoracion VALUES (null,5,'Muy buen producto sin defectos','15-02-2020',1,8);
+INSERT INTO valoracion VALUES (null,5,'Muy buen producto sin defectos','30-02-2020',1,10);
+INSERT INTO valoracion VALUES (null,5,'Muy buen producto sin defectos','06-03-2020',1,2);
+INSERT INTO valoracion VALUES (null,5,'Muy buen producto sin defectos','08-03-2020',1,31);
+INSERT INTO valoracion VALUES (null,4,'Buen producto','11-03-2020',1,21);
+INSERT INTO valoracion VALUES (null,4,'Buen producto','14-03-2020',1,20);
+INSERT INTO valoracion VALUES (null,3,'Esta bien pero tiene algunas fallas','09-01-2020',2,22);
+INSERT INTO valoracion VALUES (null,3,'Esta bien pero tiene algunas fallas','18-01-2020',2,7);
+INSERT INTO valoracion VALUES (null,4,'Buen producto','18-01-2020',2,4);
+INSERT INTO valoracion VALUES (null,4,'Buen producto','25-01-2020',2,11);
+INSERT INTO valoracion VALUES (null,4,'Buen producto','22-02-2020',2,21);
+INSERT INTO valoracion VALUES (null,4,'Buen producto','01-03-2020',3,20);
+INSERT INTO valoracion VALUES (null,4,'Buen producto','14-03-2020',3,17);
+INSERT INTO valoracion VALUES (null,4,'Buen producto','14-03-2020',3,11);
+INSERT INTO valoracion VALUES (null,5,'Muy buen producto sin defectos','02-02-2020',3,3);
+INSERT INTO valoracion VALUES (null,5,'Muy buen producto sin defectos','17-02-2020',3,15);
+INSERT INTO valoracion VALUES (null,5,'Muy buen producto sin defectos','19-02-2020',3,26);
+INSERT INTO valoracion VALUES (null,3,'Esta bien pero tiene algunas fallas','03-03-2020',3,9);
+INSERT INTO valoracion VALUES (null,3,'Esta bien pero tiene algunas fallas','10-03-2020',3,10);
+INSERT INTO valoracion VALUES (null,3,'Esta bien pero tiene algunas fallas','15-03-2020',3,32);
+INSERT INTO valoracion VALUES (null,3,'Esta bien pero tiene algunas fallas','16-03-2020',3,30);
+INSERT INTO valoracion VALUES (null,4,'Buen producto','05-01-2020',4,15);
+INSERT INTO valoracion VALUES (null,4,'Buen producto','07-01-2020',4,17);
+INSERT INTO valoracion VALUES (null,4,'Buen producto','11-01-2020',4,22);
+INSERT INTO valoracion VALUES (null,4,'Buen producto','15-01-2020',4,1);
+INSERT INTO valoracion VALUES (null,5,'Muy buen producto sin defectos','21-01-2020',4,18);
+INSERT INTO valoracion VALUES (null,5,'Muy buen producto sin defectos','02-02-2020',4,19);
+INSERT INTO valoracion VALUES (null,5,'Muy buen producto sin defectos','05-02-2020',4,23);
+INSERT INTO valoracion VALUES (null,5,'Muy buen producto sin defectos','09-02-2020',4,12);
+INSERT INTO valoracion VALUES (null,5,'Muy buen producto sin defectos','12-02-2020',4,16);
+INSERT INTO valoracion VALUES (null,4,'Buen producto','21-02-2020',4,5);
+INSERT INTO valoracion VALUES (null,4,'Buen producto','29-02-2020',4,27);
+INSERT INTO valoracion VALUES (null,4,'Buen producto','03-03-2020',4,14);
+INSERT INTO valoracion VALUES (null,4,'Buen producto','03-03-2020',4,2);
+INSERT INTO valoracion VALUES (null,4,'Buen producto','10-03-2020',4,13);
+INSERT INTO valoracion VALUES (null,5,'muy buen producto sin defectos','12-03-2020',4,24);
+INSERT INTO valoracion VALUES (null,5,'muy buen producto sin defectos','16-03-2020',4,29);
+INSERT INTO valoracion VALUES (null,5,'muy buen producto sin defectos','16-03-2020',4,33);
+INSERT INTO valoracion VALUES (null,5,'muy buen producto sin defectos','16-03-2020',4,30);
+
+-- insert color
+
+INSERT INTO color VALUES (null,'https://images.app.goo.gl/znrG5QJAZbo1KfwFA');
+INSERT INTO color VALUES (null,'https://images.app.goo.gl/MQ1GCiGgCKtzWwGv7');
+INSERT INTO color VALUES (null,'https://images.app.goo.gl/gkT7rBJBQPUQCB1HA');
+INSERT INTO color VALUES (null,'https://images.app.goo.gl/erPniUCwxPffPKCj7');
+INSERT INTO color VALUES (null,'https://images.app.goo.gl/PiqY9eFLqcy7gkvw7');
+INSERT INTO color VALUES (null,'https://images.app.goo.gl/sqpFeirfogBYsyzC9');
+INSERT INTO color VALUES (null,'https://images.app.goo.gl/e4Daj6z5FPFLgfj76');
+INSERT INTO color VALUES (null,'https://images.app.goo.gl/92oGNPSBXdaUYE2g9');
+INSERT INTO color VALUES (null,'https://images.app.goo.gl/Zbvjf37AXUzL57po9');
+INSERT INTO color VALUES (null,'https://images.app.goo.gl/ZWde4dfdAhbdSdVu7');
+
+-- insert cambioEstado
+
+INSERT INTO cambioEstado VALUES (null,'20-01-2020',2,1);
+INSERT INTO cambioEstado VALUES (null,'21-01-2020',2,2);
+INSERT INTO cambioEstado VALUES (null,'22-01-2020',2,3);
+INSERT INTO cambioEstado VALUES (null,'23-01-2020',2,4);
+INSERT INTO cambioEstado VALUES (null,'24-01-2020',2,5);
+INSERT INTO cambioEstado VALUES (null,'24-01-2020',2,6);
+INSERT INTO cambioEstado VALUES (null,'25-01-2020',2,7);
+INSERT INTO cambioEstado VALUES (null,'25-01-2020',2,8);
+INSERT INTO cambioEstado VALUES (null,'25-01-2020',2,9);
+INSERT INTO cambioEstado VALUES (null,'25-01-2020',2,10);
+INSERT INTO cambioEstado VALUES (null,'27-01-2020',2,11);
+INSERT INTO cambioEstado VALUES (null,'27-01-2020',2,12);
+INSERT INTO cambioEstado VALUES (null,'28-01-2020',2,13);
+INSERT INTO cambioEstado VALUES (null,'29-01-2020',2,14);
+INSERT INTO cambioEstado VALUES (null,'30-01-2020',2,15);
+INSERT INTO cambioEstado VALUES (null,'30-01-2020',2,16);
+INSERT INTO cambioEstado VALUES (null,'01-02-2020',3,17);
+INSERT INTO cambioEstado VALUES (null,'03-02-2020',3,18);
+INSERT INTO cambioEstado VALUES (null,'04-02-2020',3,19);
+INSERT INTO cambioEstado VALUES (null,'05-02-2020',3,20);
+INSERT INTO cambioEstado VALUES (null,'07-02-2020',3,21);
+INSERT INTO cambioEstado VALUES (null,'08-02-2020',3,22);
+INSERT INTO cambioEstado VALUES (null,'08-02-2020',3,23);
+INSERT INTO cambioEstado VALUES (null,'10-02-2020',3,24);
+INSERT INTO cambioEstado VALUES (null,'12-02-2020',3,25);
+INSERT INTO cambioEstado VALUES (null,'14-02-2020',3,26);
+INSERT INTO cambioEstado VALUES (null,'14-02-2020',3,27);
+INSERT INTO cambioEstado VALUES (null,'14-02-2020',3,28);
+INSERT INTO cambioEstado VALUES (null,'18-02-2020',3,29);
+INSERT INTO cambioEstado VALUES (null,'19-02-2020',3,30);
+INSERT INTO cambioEstado VALUES (null,'21-02-2020',3,31);
+INSERT INTO cambioEstado VALUES (null,'25-02-2020',3,32);
+INSERT INTO cambioEstado VALUES (null,'25-02-2020',3,33);
+INSERT INTO cambioEstado VALUES (null,'27-02-2020',4,34);
+INSERT INTO cambioEstado VALUES (null,'27-02-2020',4,35);
+INSERT INTO cambioEstado VALUES (null,'27-02-2020',4,36);
+INSERT INTO cambioEstado VALUES (null,'01-03-2020',4,37);
+INSERT INTO cambioEstado VALUES (null,'03-03-2020',4,38);
+INSERT INTO cambioEstado VALUES (null,'03-03-2020',4,39);
+INSERT INTO cambioEstado VALUES (null,'04-03-2020',4,40);
+
+
+
+
+
+
+
+
