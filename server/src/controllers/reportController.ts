@@ -9,7 +9,9 @@ class ReportController {
         res.json(report);
     }
     public async reportTwo(req: Request, res: Response) {
-
+        const { year } = req.params;
+        const report = await pool.query(queryReport.queryTwo, [year]);
+        res.json(report);
     }
     public async reportThree(req: Request, res: Response) {
         const { date1 } = req.params;
@@ -30,7 +32,7 @@ class ReportController {
         const report = await pool.query(queryReport.querySeven);
         res.json(report);
     }
-    public async reportEigh(req: Request, res: Response) {
+    public async reportEight(req: Request, res: Response) {
     }
 }
 const reportController = new ReportController();
