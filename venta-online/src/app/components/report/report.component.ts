@@ -55,6 +55,30 @@ export class ReportComponent implements OnInit {
     )
   }
   // methods for report 2
+  reportTwo(year: number) {
+    this.reportService.reportTwo(year).subscribe (
+      res => {
+        console.log('resultado : ', res);
+        //this.resultReports = res;
+      },
+      err => {
+        console.log('error en consulta 2: ', err);
+      }
+    )
+  }
+
+  //metofdo auxiliar reporte 2
+  reportTwoAux() {
+    this.reportService.reportTwoAux().subscribe (
+      res => {
+        console.log('resultado: ', res);
+        //this.resultReports = res;
+      },
+      err => {
+        console.log('error', err);
+      }
+    )
+  }
 
   // methods for report 3
   reportThree() {

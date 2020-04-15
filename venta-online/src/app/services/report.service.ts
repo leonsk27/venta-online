@@ -13,6 +13,15 @@ export class ReportService {
   reportOne(month: number) {
     return this.http.get<any[]>(`${this.API_URI}/report/1/${month}`);
   }
+
+  reportTwo(year: number) {
+    return this.http.get<any[]>(`${this.API_URI}/report/2/${year}`);
+  }
+
+  reportTwoAux() {
+    return this.http.get<any[]>(`${this.API_URI}/report/2`);
+  }
+
   reportThree( date1: Date, date2: Date) {
     return this.http.get<any[]>(`${this.API_URI}/report/3/${date1}/${date2}`);
   }

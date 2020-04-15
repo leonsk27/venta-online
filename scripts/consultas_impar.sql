@@ -69,7 +69,7 @@ group by d.departamento order by d.iddepartamento;
 
 -- 6.	Seleccionado una ciudad mostrar los 5 productos más vendidos.
 
-select d.departamento, dc.cantidad
+select d.departamento, sum(dc.idproducto) as 'Mas vendidos'
 from departamento d 
 join cliente cl on d.iddepartamento = cl.iddepartamento
 join compra c on cl.idcliente = c.idcliente
