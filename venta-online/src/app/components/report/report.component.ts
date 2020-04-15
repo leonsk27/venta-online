@@ -94,6 +94,31 @@ export class ReportComponent implements OnInit {
     // )
   }
 
+  //metodo para reporte 6
+  reportSix(idDepartamento: number) {
+    this.reportService.reportSix(idDepartamento).subscribe (
+      res => {
+        console.log('resultado: ', res);
+        this.resultReports = res;
+      },
+      err => {
+        console.log('error en reporte 6: ', err);
+      }
+    )
+  }
+
+  //metodo reporte 8
+  reportEight(idDepartamento: number) {
+    this.reportService.reportEight().subscribe (
+      res => {
+        console.log('resultado: ', res);
+        //this.resultReports = res;
+      },
+      err => {
+        console.log('error en consulta 8: ', err);
+      }
+    )
+  }
 
 
 

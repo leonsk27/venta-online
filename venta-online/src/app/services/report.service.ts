@@ -28,7 +28,16 @@ export class ReportService {
   reportFive() {
     return this.http.get<any[]>(`${this.API_URI}/report/5`);
   }
+
+  reportSix(idDepartamento: number) {
+    return this.http.get<any[]>(`${this.API_URI}/report/6/${idDepartamento}`);
+  }
+
   reportSeven() {
     return this.http.get<any[]>(`${this.API_URI}/report/7`);
+  }
+
+  reportEight() {
+    return this.http.get<any[]>(`${this.API_URI}/report/8`);
   }
 }
